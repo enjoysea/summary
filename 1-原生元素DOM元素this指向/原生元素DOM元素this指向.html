@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>元素DOM元素 this指向</title>
+<script>
+function clickFn(){
+	console.log(1, this);	
+}
+
+let fn = () => console.log('$', this);
+fn();
+
+</script>
+</head>
+
+<body>
+<button onClick="clickFn()">按钮1</button>
+<button onClick="console.log(2, this);">按钮2</button>
+<button onClick="(function(){console.log(3, this)})()">按钮3</button>
+<button onClick="(() => console.log(4, this))()">按钮4</button>
+</body>
+</html>
