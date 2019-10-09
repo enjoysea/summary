@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>判断输入是否为空（包括空格）</title>
+<script>
+window.onload = function(){	
+	let oT = document.querySelector('textarea');
+	let oP = document.querySelector('p');	
+	
+	oT.onkeyup = function(){
+		if (oT.value.trim() === '') return;
+		oP.innerHTML = oT.value + '#';
+		console.log(1);
+	};
+};
+</script>
+</head>
+
+<body>
+<textarea></textarea>
+<p></p>
+</body>
+</html>
